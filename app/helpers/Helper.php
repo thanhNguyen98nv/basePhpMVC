@@ -80,3 +80,10 @@ if (!function_exists('view')) {
     }
 }
 
+
+if (!function_exists('env')) {
+    function env($variableName, $defaultValue = null)
+    {
+        return $_ENV[$variableName] ?? $defaultValue;
+    }
+}

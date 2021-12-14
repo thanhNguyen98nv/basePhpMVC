@@ -13,7 +13,6 @@ $log = new Logger('name');
 $log->pushHandler(new StreamHandler('../storage/logs', Logger::WARNING));
 
 try {
-    //dd($_SERVER['HTTP_HOST'], $_SERVER['REQUEST_URI'], $_SERVER, $_GET, $_POST);
 
     $patch = explode('?', $_SERVER['REQUEST_URI'])[0];
 
