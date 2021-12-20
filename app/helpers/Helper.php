@@ -31,6 +31,7 @@ if (!function_exists('config')) {
 
             if (in_array($nameFileConfig, $configFileNames)) {
                 $configData = include('../config/' . $nameFileConfig . '.php');
+                dd($configData);
 
                 return getAttributeInMultidimensionalArray(
                     $configData,
@@ -79,7 +80,6 @@ if (!function_exists('view')) {
         require $content;
     }
 }
-
 
 if (!function_exists('env')) {
     function env($variableName, $defaultValue = null)
